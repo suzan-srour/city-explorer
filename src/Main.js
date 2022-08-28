@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import DisplayInfo from "./DisplayInfo";
 import Map from "./Map";
-import Error from "./Error"
+import Errors from "./Errors"
 class Main extends React.Component{
 
   constructor(props){
@@ -54,7 +54,7 @@ class Main extends React.Component{
           <button type='submit'>Explore!</button>
         </form>
         <DisplayInfo display_name={this.state.display_name} lon={this.state.lon} lat={this.state.lat} />
-        <Error errFlag={this.state.errFlag} />
+        <Errors errFlag={this.state.errFlag} />
         <Map lon={this.state.lon} lat={this.state.lat} mapFlag={this.state.mapFlag}/>
 
         
